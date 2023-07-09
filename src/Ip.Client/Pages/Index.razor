@@ -1,3 +1,5 @@
-﻿@page "/"
+﻿@inject ShowMe Me
 
-<h1>Hello, world!</h1>
+@page "/"
+
+<h1>Hello, world! @Me.UrlBase</h1>
