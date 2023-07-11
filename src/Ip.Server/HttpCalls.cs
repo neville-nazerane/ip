@@ -25,7 +25,11 @@ namespace Ip.Server
             string ipAddress;
             if (req.Headers.TryGetValues("X-Forwarded-For", out var headerValues))
             {
-                ipAddress = headerValues.FirstOrDefault();
+                ipAddress = headerValues.FirstOrDefault()
+                                        .Split(',')
+                                        .First()
+                                        .Split(':')
+                                        .First();
             }
             else
             {
