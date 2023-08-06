@@ -1,0 +1,25 @@
+﻿@page
+@model IndexModel
+
+@if (!string.IsNullOrEmpty(Model.IPv4Address))
+{
+    <h1>
+        Your IPv4 is: @Model.IPv4Address
+    </h1>
+}
+else
+{
+    <h1 class="text-danger">Can't fetch IPv4</h1>
+}
+
+@if (!string.IsNullOrEmpty(Model.IPv6Address))
+{
+    <h1>
+        Your IPv6 is: @Model.IPv6Address
+    </h1>
+}
+else
+{
+    <h1 class="text-danger">Can't fetch IPv6</h1>
+}
+
