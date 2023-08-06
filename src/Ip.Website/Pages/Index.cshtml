@@ -9,7 +9,7 @@
 }
 else
 {
-    <h1 class="text-danger">Can't fetch IPv4</h1>
+    <h1 class="text-warning">Can't fetch IPv4</h1>
 }
 
 @if (!string.IsNullOrEmpty(Model.IPv6Address))
@@ -20,6 +20,6 @@ else
 }
 else
 {
-    <h1 class="text-danger">Can't fetch IPv6</h1>
+    <h1 class="text-warning">Can't fetch IPv6</h1>
 }
 
