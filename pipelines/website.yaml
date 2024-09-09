@@ -1,4 +1,8 @@
 
+pool: hosted-linux
+
+pr: none
+
 trigger:
   branches:
     include:
@@ -6,9 +10,7 @@ trigger:
   paths:
     include:
       - src/Ip.Website
-
-pool:
-  vmImage: ubuntu-latest
+      - website.yaml
 
 resources:
   repositories:
